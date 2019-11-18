@@ -1,14 +1,15 @@
-def split(t, l):
-    l-=3
+def split(textInput, length):
+    length -= 3
     text = ""
-    for s in t.split():
-        if l-len(s) >= 0:
+    for s in textInput.split():
+        if length - len(s) >= 0:
             text += (s + " ")
-            l-=len(s)
+            length -= len(s)
         else:
-            l = 0
+            length = 0
 
     text += "..."
     print(text)
+
 
 split(input("Voer hier je title in : "), int(input("voer hier je maximale lengte in : ")))
